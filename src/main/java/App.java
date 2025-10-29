@@ -1,12 +1,12 @@
+import java.io.FileInputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+import java.util.Properties;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+public class App {
+    public static void main(String[] args) throws Exception {
+
+        System.out.println("hello");
     }
 }
