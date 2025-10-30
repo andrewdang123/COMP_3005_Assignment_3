@@ -49,7 +49,7 @@ public class Options {
         EXIT(0, "EXIT", () -> exit()),
         GET_ALL_STUDENTS(1, "Retrieves and displays all records from the students table.", () -> Main.getAllStudents()),
         ADD_STUDENT(2, "Inserts a new student record into the students table.", () -> Main.addStudent()),
-        UPDATE_STUDENT_EMAIL(3, "Retrieves and displays all records from the students table.",
+        UPDATE_STUDENT_EMAIL(3, "Updates the email address for a student with the specified student_id.",
                 () -> Main.updateStudentEmail()),
         DELETE_STUDENT(4, "Deletes the record of the student with the specified student_id",
                 () -> Main.deleteStudent());
@@ -86,7 +86,7 @@ public class Options {
      ***************************************************************/
     public static <E extends Enum<E> & FunctionEnum> void runView(Class<E> enumClass) {
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = ScannerUtil.getScanner();
 
         while (true) {
             FunctionEnum.printMenu(enumClass);
@@ -97,6 +97,7 @@ public class Options {
                 System.out.print("Enter valid command number: ");
             }
             int code = scanner.nextInt();
+            scanner.nextLine();
 
             E function = FunctionEnum.fromCode(enumClass, code);
             if (function == null) {
