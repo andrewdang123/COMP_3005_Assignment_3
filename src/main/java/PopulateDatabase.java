@@ -14,7 +14,7 @@ public class PopulateDatabase {
         String password = "postgres";
 
         try (Connection conn = DriverManager.getConnection(url, user, password)) {
-            System.out.println("✅ Connected to PostgreSQL successfully!");
+            System.out.println("Connected to PostgreSQL successfully!");
 
             URL resource = PopulateDatabase.class.getClassLoader().getResource("School.sql");
             if (resource == null) {
@@ -32,9 +32,9 @@ public class PopulateDatabase {
                 }
             }
 
-            System.out.println("📘 Executed School.sql successfully!");
+            System.out.println("Executed School.sql successfully!");
         } catch (URISyntaxException e) {
-            System.err.println("⚠️ Invalid URI for School.sql: " + e.getMessage());
+            System.err.println("Invalid URI for School.sql: " + e.getMessage());
         } catch (Exception e) {
             e.printStackTrace();
         }
