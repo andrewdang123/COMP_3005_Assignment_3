@@ -24,7 +24,6 @@ public class PopulateDatabase {
             Path sqlPath = Paths.get(resource.toURI());
             String sql = Files.readString(sqlPath);
 
-            // Execute SQL statements
             try (Statement stmt = conn.createStatement()) {
                 for (String query : sql.split(";")) {
                     if (!query.trim().isEmpty())

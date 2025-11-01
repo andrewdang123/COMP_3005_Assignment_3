@@ -17,12 +17,14 @@ public class Main {
     }
 
     public static void getAllStudents() {
+        // SQL Query to show all the student info
         String query = "SELECT * FROM students;";
         try (Connection connection = connect();
                 Statement statement = connection.createStatement();
                 ResultSet result = statement.executeQuery(query)) {
 
             System.out.println("All Students:");
+            // Prints the info out
             while (result.next()) {
                 int student_id = result.getInt("student_id");
                 String first_name = result.getString("first_name");
@@ -62,6 +64,7 @@ public class Main {
     }
 
     public static void addStudent(String first_name, String last_name, String email, LocalDate enrollment_date) {
+        // SQL Query to add new student info
         String query = "INSERT INTO students (first_name, last_name, email, enrollment_date) VALUES (?, ?, ?, ?);";
         try (Connection conn = connect();
                 PreparedStatement preparedStatement = conn.prepareStatement(query)) {
@@ -98,6 +101,7 @@ public class Main {
     }
 
     public static void updateStudentEmail(int student_id, String new_email) {
+        // SQL Query to update preexisting info
         String query = "UPDATE students SET email = ? WHERE student_id = ?;";
         try (Connection conn = connect();
                 PreparedStatement preparedStatement = conn.prepareStatement(query)) {
@@ -133,6 +137,7 @@ public class Main {
     }
 
     public static void deleteStudent(int student_id) {
+        // SQL Query to delete students based on ID
         String query = "DELETE FROM students WHERE student_id = ?;";
         try (Connection conn = connect();
                 PreparedStatement preparedStatement = conn.prepareStatement(query)) {
