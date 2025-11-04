@@ -22,7 +22,7 @@ public class PopulateDatabase {
             }
 
             Path sqlPath = Paths.get(resource.toURI());
-            String sql = Files.readString(sqlPath);
+            String sql = new String(Files.readAllBytes(sqlPath));
 
             try (Statement stmt = conn.createStatement()) {
                 for (String query : sql.split(";")) {
