@@ -7,9 +7,9 @@ Ensure Maven is installed and set on Path
 Ensure Postgres is Installed and set on Path
 
 
-Have a Database named "school" already created
 *Note terminal commands were done in Git Bash, not the regular terminal/powershell
 To populate/repopulate this database, you can use a bash script with ./run_populate.sh
+The password is "postgres"
 After the database has been populated, you can run the application using a bash script with ./run_main.sh
 
 When the application is running, the user has 4 options.
