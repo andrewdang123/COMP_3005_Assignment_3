@@ -18,7 +18,7 @@ When the application is running, the user has 4 options.
 3: Update a student email
 4: Delete a student entry
 
-*Note, I am working on the final project with Dylan Nakamura.
+*Note, I am working on the final project with Dylan Nakamura 101306225.
 I modelled this assignment off that, so our general setup may or may not be similar.
 
 https://www.youtube.com/watch?v=MeDYIzF9Tag
