@@ -4,12 +4,12 @@ Andrew Dang 101297865
 __https://www.youtube.com/watch?v=MeDYIzF9Tag__
 
 *Install Requirements:*
-Ensure Maven is installed and set on Path
-Ensure Postgres is Installed and set on Path
-Java JDK
+Ensure Maven is installed and set on Path.
+Ensure Postgres is installed and set on Path.
+Java JDK is installed.
 
 
-*Note terminal commands were done in Git Bash, not the regular terminal/powershell.*
+*Note: terminal commands were done in Git Bash, not the regular terminal/powershell.*
 To populate/repopulate this database, you can use a bash script with ./run_populate.sh.
 The password is "postgres".
 After the database has been populated, you can run the application using a bash script with ./run_main.sh.
