@@ -3,8 +3,10 @@ Andrew Dang 101297865
 
 https://www.youtube.com/watch?v=MeDYIzF9Tag
 
+Install Requirements:
 Ensure Maven is installed and set on Path
 Ensure Postgres is Installed and set on Path
+Java JDK
 
 
 *Note terminal commands were done in Git Bash, not the regular terminal/powershell
